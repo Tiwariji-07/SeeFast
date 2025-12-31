@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Seefast Frontend
 
-## Getting Started
+Modern Next.js dashboard for AI-powered data visualization.
 
-First, run the development server:
+## Features
+
+- 🎨 **Dynamic Canvas** - Grid-based widget layout
+- 💬 **Chat Interface** - Natural language queries
+- 📊 **Rich Widgets** - Tables, Charts, Metrics
+- ⚡ **Real-time** - Instant visualization updates
+- 🎯 **Responsive** - Desktop and mobile
+
+## Tech Stack
+
+- **Next.js 15** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **react-grid-layout** - Widget grid
+- **Recharts** - Charts
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Start dev server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App runs at http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── page.tsx         # Main dashboard
+│   ├── layout.tsx       # Root layout
+│   └── globals.css      # Global styles
+├── components/
+│   ├── Canvas.tsx       # Widget grid
+│   ├── ChatBox.tsx      # Input component
+│   └── widgets/
+│       ├── Table.tsx
+│       ├── BarChart.tsx
+│       ├── LineChart.tsx
+│       ├── PieChart.tsx
+│       └── MetricCard.tsx
+└── lib/
+    └── api.ts           # Backend API client
+```
 
-## Learn More
+## Widget Types
 
-To learn more about Next.js, take a look at the following resources:
+| Component | Use Case |
+|-----------|----------|
+| `Table` | Tabular data, lists |
+| `BarChart` | Comparisons |
+| `LineChart` | Trends over time |
+| `PieChart` | Distribution |
+| `MetricCard` | KPIs, single values |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create `.env.local`:
 
-## Deploy on Vercel
+```
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production |
+| `pnpm start` | Start production server |
+| `pnpm lint` | Run ESLint |
+
+## Design
+
+- **Dot pattern** background
+- **Glassmorphism** cards
+- **Floating** chat input
+- **Blue** accent color (#3b82f6)
+
+## License
+
+MIT
